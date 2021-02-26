@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  nginx-json:
+    image: ruanbekker/nginx-demo:json
+    container_name: nginx-app
+    ports:
+      - 8080:80
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: 127.0.0.1:24224
